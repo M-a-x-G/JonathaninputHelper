@@ -53,4 +53,21 @@ public class InputHelper {
         return out;
     }
 
+    /**
+     * Reads a value as double from console input
+     * @return positive int value or -1 if something went wrong
+     */
+    public static double readDouble() {
+        Scanner scanner = new Scanner(System.in);
+        double out = -1;
+
+        try {
+            out = scanner.nextDouble();
+        } catch (NoSuchElementException e){
+//            do nothing if exception is thrown
+        }
+
+        return out;
+    }
+
 }
